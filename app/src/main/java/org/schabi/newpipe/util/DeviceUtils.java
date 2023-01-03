@@ -2,6 +2,7 @@ package org.schabi.newpipe.util;
 
 import static android.content.Context.INPUT_SERVICE;
 
+import android.annotation.SuppressLint;
 import android.app.UiModeManager;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -16,6 +17,7 @@ import android.view.KeyEvent;
 
 import androidx.annotation.Dimension;
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.preference.PreferenceManager;
@@ -98,6 +100,7 @@ public final class DeviceUtils {
      * @param context the context to use for services and config.
      * @return true if the Android device is in desktop mode or using DeX.
      */
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @SuppressWarnings("JavaReflectionMemberAccess")
     public static boolean isDesktopMode(@NonNull final Context context) {
         // Adapted from https://stackoverflow.com/a/64615568

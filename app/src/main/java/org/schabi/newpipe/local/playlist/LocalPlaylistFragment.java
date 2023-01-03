@@ -385,7 +385,7 @@ public class LocalPlaylistFragment extends BaseLocalListFragment<List<PlaylistSt
 						.collect(Collectors.joining("\n"))))
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(urlsText -> ShareUtils.shareText(
-                        requireContext(), name, name + " "\n" + urlsText),
+                        requireContext(), name, name + " \n\n" + urlsText),
                         throwable -> showUiErrorSnackbar(this, "Sharing playlist", throwable)));
     }
 
