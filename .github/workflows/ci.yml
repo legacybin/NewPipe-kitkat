@@ -5,6 +5,7 @@ on:
   pull_request:
     branches:
       - dev
+      - dev-kitkat
       - master
       - release**
     paths-ignore:
@@ -18,6 +19,7 @@ on:
   push:
     branches:
       - dev
+      - dev-kitkat
       - master
     paths-ignore:
       - 'README.md'
